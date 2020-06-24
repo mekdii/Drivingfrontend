@@ -1,0 +1,491 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Driving</title>
+        
+        <script src='../js/jquery-3.3.1.min.js' type='text/javascript'></script>
+        <script src='../js/select2.min.js' type='text/javascript'></script>
+
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+
+        <link href='../css/select2.min.css' rel='stylesheet' type='text/css'>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../css/style.css" type="text/css">
+        
+      
+    </head>
+ 
+    <body>
+
+        {{ template   "header.html"}}
+      
+        <!-- Contact Section End -->
+        <!-- Admins Registration Navigation Bar  And Related  -->
+    
+    
+       
+        
+        <section class="py-5">
+            
+            <!-- Add Student Category Begin -->
+           
+           <div class="container" id="adminNewInput" style="display: block;">
+                <div class="row">
+                    <div class="col-md-8 px-5">
+                 <form action="/admin/new" method="POST" enctype="multipart/form-data">
+                    <input name="_csrf" value="{{.CSRF}}" style="display:none" >
+                    
+                        <h2>Welcome to Student Registration form</h2>
+                        <div class="row">
+                        <div class="col-md-6">
+                         <div class="form-group">
+                            <label for="fname">Firstname:</label>
+                            <input type="text" class="form-control" id="fname" placeholder="enter firstname" name="email" required>
+                          </div>
+                          <div class="form-group">
+                            <label for="mname">Middlename:</label>
+                            <input type="text" class="form-control" id="mname" placeholder="enter middlename" name="email" required>
+                          </div>
+                          </div>
+                          <div class="col-md-6">
+                          <div class="form-group">
+                            <label for="lname">Lastname:</label>
+                            <input type="text" class="form-control" id="lname" placeholder="Enter lastname" name="email">
+                          </div>
+                          <div class="form-group">
+                            <label for="nname">Nickname:</label>
+                            <input type="text" class="form-control" id="nname" placeholder="Enter nikname" name="email">
+                          </div>
+                          </div>
+                          </div>
+
+
+                          <div class="form-group">
+                            <label for="birth">Birthday:</label>
+                            <input class="form-control" id="date" name="date" placeholder="MM/DD/YYYY" type="text"/>
+                          </div>
+
+
+
+                          <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="birthp">Birth place:</label>
+                                    <br>
+                                    <label for="region">Region:</label>
+                                    <br>
+                                    
+                                    <select id='selUser' style='width: 260px;'>
+                                     <option value='0'>-- Select Region --</option>          
+                                     <option value='1'>Tigray</option>  
+                                     <option value='2'>Afar</option>   
+                                     <option value='3'>Amhara</option>        
+                                     <option value='4'>Oromia</option>        
+                                     <option value='5'>Somalia</option>        
+                                     <option value='6'>Benshangul-Gumz</option>        
+                                     <option value='7'>Southern nations</option>
+                                     <option value='8'>Gambela</option>        
+                                     <option value='9'>Hareri</option> 
+                                 </select>   
+                         
+                                   
+                                  </div>
+                              <div class="form-group">
+                                <label for="zone">Zone:</label>
+                                <input type="number" class="form-control" id="zone" placeholder="enter your zone" name="email" required>
+                              </div>
+                              </div>
+                              <div class="col-md-6">
+                              <div class="form-group">
+                                  <br>
+                                <label for="woreda">Woreda:</label>
+                                <input type="text" class="form-control" id="woreda" placeholder="enter your woreda" name="email">
+                              </div>
+                              <div class="form-group">
+                                <label for="kebele">Kebele:</label>
+                                <input type="text" class="form-control" id="kebele" placeholder="enter your kebele" name="email">
+                              </div>
+                              </div>
+                              </div>
+
+
+
+                              <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="livep">Living Place:</label>
+                                        <br>
+                                        <label for="region">Region:</label>
+                                        <br>
+                                        
+                                        <select id='selUser2' style='width: 260px;'>
+                                         <option value='0'>-- Select Region --</option>          
+                                         <option value='1'>Tigray</option>  
+                                         <option value='2'>Afar</option>   
+                                         <option value='3'>Amhara</option>        
+                                         <option value='4'>Oromia</option>        
+                                         <option value='5'>Somalia</option>        
+                                         <option value='6'>Benshangul-Gumz</option>        
+                                         <option value='7'>Southern nations</option>
+                                         <option value='8'>Gambela</option>        
+                                         <option value='9'>Hareri</option> 
+                                     </select>   
+                             
+                                       
+                                      </div>
+                                  <div class="form-group">
+                                    <label for="zone">Zone:</label>
+                                    <input type="number" class="form-control" id="zone" placeholder="enter your zone" name="email" required>
+                                  </div>
+                                  </div>
+                                  <div class="col-md-6">
+                                  <div class="form-group">
+                                      <br>
+                                    <label for="woreda">Woreda:</label>
+                                    <input type="text" class="form-control" id="woreda" placeholder="enter your woreda" name="email">
+                                  </div>
+                                  <div class="form-group">
+                                    <label for="kebele">Kebele:</label>
+                                    <input type="text" class="form-control" id="kebele" placeholder="enter your kebele" name="email">
+                                  </div>
+                                  </div>
+                                  </div>
+    
+    
+
+
+
+
+
+
+                         
+                          
+                          <div class="form-group">
+                            <label for="marriy">Marital Status:</label>
+                            <select class="browser-default custom-select">
+                                <option selected>Open this select menu</option>
+                                <option value="1">Maried</option>
+                                <option value="2">Diavorced</option>
+                                <option value="3">Single</option>
+                                <option value="4">widowed</option>
+                                <option value="5">separeted</option>
+                              </select>
+                          </div>
+
+
+                          <div class="row">
+                            <div class="col-md-6">
+                             <div class="form-group">
+                                <label for="pnumber">Phoneno:</label>
+                                <input type="number" class="form-control" id="phone" placeholder="enter Phonenumber" name="email" required>
+                              </div>
+                              <div class="form-group">
+                                <label for="fullname">Partner Fullname:</label>
+                                <input type="text" class="form-control" id="full" placeholder="enter partner full name" name="email" required>
+                              </div>
+                              </div>
+                              <div class="col-md-6">
+                              <div class="form-group">
+                                <label for="fam">Familiyquantitiy:</label>
+                                <input type="number" class="form-control" id="fam" placeholder="enter familiyquantitiy" name="email">
+                              </div>
+                              <div class="form-group">
+                                <label for="pphone">Partner Phoneno:</label>
+                                <input type="number" class="form-control" id="pphone" placeholder="Enter partner phone number" name="email">
+                              </div>
+                              </div>
+                              </div>
+    
+                           <div class="form-group">
+                            <label for="gfull">Garanter fullname:</label>
+                            <input type="number" class="form-control" id="gfull" placeholder="enter Phonenumber" name="pswd" required>
+                          </div>
+
+
+                          <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="gadd">Garanter Address:</label>
+                                    <br>
+                                    <label for="region">Region:</label>
+                                    <br>
+                                    
+                                    <select id='selUser3' style='width: 260px;'>
+                                     <option value='0'>-- Select Region --</option>          
+                                     <option value='1'>Tigray</option>  
+                                     <option value='2'>Afar</option>   
+                                     <option value='3'>Amhara</option>        
+                                     <option value='4'>Oromia</option>        
+                                     <option value='5'>Somalia</option>        
+                                     <option value='6'>Benshangul-Gumz</option>        
+                                     <option value='7'>Southern nations</option>
+                                     <option value='8'>Gambela</option>        
+                                     <option value='9'>Hareri</option> 
+                                 </select>   
+                         
+                                   
+                                  </div>
+                              <div class="form-group">
+                                <label for="zone">Zone:</label>
+                                <input type="number" class="form-control" id="zone" placeholder="enter your zone" name="email" required>
+                              </div>
+                              </div>
+                              <div class="col-md-6">
+                              <div class="form-group">
+                                  <br>
+                                <label for="woreda">Woreda:</label>
+                                <input type="text" class="form-control" id="woreda" placeholder="enter your woreda" name="email">
+                              </div>
+                              <div class="form-group">
+                                <label for="kebele">Kebele:</label>
+                                <input type="text" class="form-control" id="kebele" placeholder="enter your kebele" name="email">
+                              </div>
+                              </div>
+                              </div>
+
+                              <div class="row">
+                                <div class="col-md-6">
+                                 <div class="form-group">
+                                    <label for="licence">Privious LicenseType:</label>
+                                    <input type="email" class="form-control" id="licence" placeholder="enter p-licensetype" name="email" required>
+                                  </div>
+                                
+                                  </div>
+                                  <div class="col-md-6">
+                                  <div class="form-group">
+                                    <label for="pnumber">Privious LicenseNumber:</label>
+                                    <input type="number" class="form-control" id="pnumber" placeholder="Enter p-licencenumber" name="email">
+                                  </div>
+                                
+                                  </div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col-md-6">
+                                  <div class="form-group">
+                                    <label for="email">profilepic:</label>
+                                    <br>
+                                    <div>
+                                    <div class="button_outer">
+                                        <div class="btn_upload">
+                                            <input type="file" id="upload_file" name="">
+                                            Upload Image
+                                        </div>
+                                        <div class="processing_bar"></div>
+                                        <div class="success_box"></div>
+                                    </div>
+                                    <div class="error_msg"></div>
+                                 <div class="uploaded_file_view" id="uploaded_view">
+                               <span class="file_remove">X</span>
+                                </div>
+                                </div>
+                                
+                                 </div>
+                                 </div>
+                                 <div class="col-md-6">
+                                   <p style="color: white;">submit</p>
+                                  <div class="form-group">
+                                    <button   type="submit" class="btnform text-center">Submit</button>
+                                    </div>
+
+                                   </div>
+                                   </div>
+   
+                        </form>
+                        </div>
+    
+                        <div class="col-md-4 py-5">
+                            <form action="/admin/new" method="POST" enctype="multipart/form-data">
+                               <input name="_csrf" value="{{.CSRF}}" style="display:none" >
+                               
+                                   <h2>Active Rounds</h2>
+                                
+                                   <div class="cards" >
+                                     <div class="card mt-5" style="background-color: blue;">
+                                       <div class="card-body">
+                                         <div class="row">
+                                           <div class="col-md-6">
+                                            
+                                        <p>Round Id:</p>
+                                        <p>Round Name:</p>
+                                        <p>Branch Name:</p>
+                                        <p>Registored Count:</p>
+                                        <p>on Registored:</p>
+                                        <p>Max Students:</p>
+                                        <p>Cost:</p>
+                                        <p>Category Title:</p>
+                                        <p>Start Date:</p>
+
+                                        </div>
+                                        <div class="col-md-6 ">
+                                          <p>01234</p>
+                                          <p>Round Name one</p>
+                                          <p>Branch name asosa</p>
+                                          <p>200</p>
+                                          <p>True</p>
+                                          <p>400</p>
+                                          <p>10,000etb</p>
+                                          <p>Taxi</p>
+                                          <p>20, june 2020</p>
+                                          </div>
+                                      </div>
+
+
+
+                                     </div>
+
+
+
+                                   </div>
+                                   <div class="card mt-5">
+                                    <div class="card-body">
+                                      <div class="row">
+                                        <div class="col-md-6">
+                                         
+                                     <p>Round Id:</p>
+                                     <p>Round Name:</p>
+                                     <p>Branch Name:</p>
+                                     <p>Registored Count:</p>
+                                     <p>on Registored:</p>
+                                     <p>Max Students:</p>
+                                     <p>Cost:</p>
+                                     <p>Category Title:</p>
+                                     <p>Start Date:</p>
+
+                                     </div>
+                                     <div class="col-md-6 ">
+                                       <p>01234</p>
+                                       <p>Round Name one</p>
+                                       <p>Branch name asosa</p>
+                                       <p>200</p>
+                                       <p>True</p>
+                                       <p>400</p>
+                                       <p>10,000etb</p>
+                                       <p>Taxi</p>
+                                       <p>20, june 2020</p>
+                                       </div>
+                                   </div>
+
+
+
+                                  </div>
+
+
+
+                                </div>
+                                   </div>
+                                   <div  class="px-5 py-3">
+                                   <button style="background-color:#003679; color: white;"> show more </button>
+                                   </div>
+                                   </form>
+                                   </div>
+    
+    
+    
+    
+    
+    
+    
+    
+                </div>
+                </div>
+                </section>
+    
+                <script>
+                    $(document).ready(function(){
+                        
+                        // Initialize select2
+                        $("#selUser").select2();
+            
+                        // Read selected option
+                        $('#but_read').click(function(){
+                            var username = $('#selUser option:selected').text();
+                            var userid = $('#selUser').val();
+                       
+                        });
+                    });
+                    </script>
+                     <script>
+                        $(document).ready(function(){
+                            
+                            // Initialize select2
+                            $("#selUser2").select2();
+                
+                            // Read selected option
+                            $('#but_read').click(function(){
+                                var username = $('#selUser2 option:selected').text();
+                                var userid = $('#selUser2').val();
+                           
+                            });
+                        });
+                        </script>
+
+<script>
+    $(document).ready(function(){
+        
+        // Initialize select2
+        $("#selUser3").select2();
+
+        // Read selected option
+        $('#but_read').click(function(){
+            var username = $('#selUser3 option:selected').text();
+            var userid = $('#selUser3').val();
+       
+        });
+    });
+    </script>
+               
+                    
+        
+               <script>
+                $(document).ready(function(){
+                    var date_input=$('input[name="date"]'); //our date input has the name "date"
+                    var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
+                    date_input.datepicker({
+                        format: 'mm/dd/yyyy',
+                        container: container,
+                        todayHighlight: true,
+                        autoclose: true,
+                    })
+                })
+            </script>
+            
+        <script>
+    
+            var btnUpload = $("#upload_file"),
+                    btnOuter = $(".button_outer");
+                btnUpload.on("change", function(e){
+                    var ext = btnUpload.val().split('.').pop().toLowerCase();
+                    if($.inArray(ext, ['gif','png','jpg','jpeg']) == -1) {
+                        $(".error_msg").text("Not an Image...");
+                    } else {
+                        $(".error_msg").text("");
+                        btnOuter.addClass("file_uploading");
+                        setTimeout(function(){
+                            btnOuter.addClass("file_uploaded");
+                        },3000);
+                        var uploadedFile = URL.createObjectURL(e.target.files[0]);
+                        setTimeout(function(){
+                            $("#uploaded_view").append('<img src="'+uploadedFile+'" />').addClass("show");
+                        },3500);
+                    }
+                });
+                $(".file_remove").on("click", function(e){
+                    $("#uploaded_view").removeClass("show");
+                    $("#uploaded_view").find("img").remove();
+                    btnOuter.removeClass("file_uploading");
+                    btnOuter.removeClass("file_uploaded");
+                });
+            </script>
+    
+    
+    
+        <!--  List Of Categories End  -->
+        <!-- Footer Section Begin -->
+        {{ template   "footer.html"}}
+      
+    </body>
+    
+</html>

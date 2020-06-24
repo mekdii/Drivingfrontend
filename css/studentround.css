@@ -1,0 +1,66 @@
+nav ul a{
+  padding: 1rem;
+  color: black; 
+  font-family: 'Times New Roman', Times, serif;
+  text-decoration: none; 
+}
+nav ul a.active,nav ul a:active{
+  border-bottom: 2px solid blue;
+  background: rgba(0,0,0,.05);  
+}
+nav ul a:hover{
+  background: rgba(0,0,0,.1); 
+}
+
+.pf-feature-image {
+  margin-bottom: 75px;
+}
+.pf-feature-image .feature-image-content {
+  background: #f5f5f5;
+  position: relative;
+}
+.pf-feature-image .feature-image-content .image-uploader {
+  min-height: 13rem;
+}
+.pf-feature-image .feature-image-content .image-uploader .uploaded .uploaded-image .delete-image i {
+  font-size: 15px;
+}
+.pf-feature-image .feature-image-content .upload-input-class {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  left: 0;
+  z-index: -999;
+}
+.pf-feature-image .feature-image-content p {
+  margin-bottom: 20px;
+}
+.pf-feature-image .feature-image-content p i {
+  margin-right: 5px;
+}
+.pf-feature-image .feature-image-content div {
+  font-size: 14px;
+  color: #666666;
+  margin-bottom: 25px;
+}
+
+@media only screen and (min-width: 1367px) {
+    .student{
+      
+        margin-left: 300px;
+        
+       
+      }
+   
+      
+ 
+   }
+   @media only screen and (min-width: 1024px) and (max-width: 1366px) {
+    .student{
+      
+       margin-left: 100px;
+       
+      
+     }
+ 
+   }

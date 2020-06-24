@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Aler Template">
+    <meta name="keywords" content="Aler, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Driving </title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900&display=swap" rel="stylesheet">
+
+    <!-- Css Styles -->
+  
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+  
+</head>
+{{template "header.html"}}
+
+<body>
+        
+    <div class="container">
+        <div class="row">
+            
+     
+    <div class="col-md-3 col-sm-0  col-xs-12 border-right" >
+      
+        <h2 style="color: white;">navpart</h2>
+    
+        <nav class="hsnav">
+            <ul class="dropdown2">
+                <li><a href="./property.html">Students</a></li>
+                <li><a href="search">Admins</a></li>
+                <li><a href="./property-details.html">Teachers</a></li>
+                <li><a href="./property-comparison.html">Field mans</a></li>
+                <li><a href="./property-submit.html">Vichles</a></li>
+                <li><a href="./property-submit.html">Rounds</a></li>
+                <li class="active"><a href="./property-submit.html">Learning Resource</a></li>
+                <li><a href="./property-submit.html">Break date configration</a></li>
+                <li><a href="./property-submit.html">Information site</a></li>
+
+            </ul>
+        </nav>
+        
+        
+        </div>
+
+
+
+
+
+
+
+
+   <div class="col-md-9 col-sm-12 col-xs-12">
+       <!--this is to inform u this section will be deleted-->
+
+       <script>
+        var newarray = ["registerfieldman" , 
+        "adminNewInput" , 
+        "registerlecture" ];
+        var arros = [
+            "fieldman",
+            "admino",
+            "lecture"
+        ]
+        function showMe(indexo ){
+            newarray.forEach(function(value  , index , arrayys){
+                var elem = document.getElementById(value);
+                var pointer = document.getElementById(arros[index]);
+                if (index== indexo){
+                    elem.setAttribute("style" , "display:block;")
+                    pointer.setAttribute("class"  , "activeregister")
+                }else{
+                    elem.setAttribute("style", "display:none;")
+                    pointer.removeAttribute("class");
+                    pointer.setAttribute("class" , "col-lg-4 col-sm-7  col-md-6");
+                }
+            });
+        }
+    </script>
+
+    <style>
+        .activeregister{
+            background-color: #003679;
+            color: #FFF;
+            font-weight: bold;
+            
+        }
+        .activeregister:hover{
+            box-shadow: 5px -5px 5px;
+            transition-duration: 500ms;
+        }
+    </style>
+    <hr>
+    <section class="pt-5 section" >
+       
+        <nav  class="container" style="box-shadow: 4px 4px 4px ;margin-bottom: 30px ">
+            <div class="row">
+            <div onclick="showMe(1)" id="admino" class=" activeregister col-lg-4 col-sm-7  col-md-6">
+                <div onclick="addAdmins()" class="col-lg-8 col-md-8">
+                    <div onclick="addAdmins()" class="section-title">
+                        <h3> Register Admin</h3>
+                    </div>
+                </div>
+            </div>
+            <div onclick="showMe(0)" id="fieldman" class="col-lg-4 col-sm-7  col-md-6">
+                <div class="col-lg-8 col-md-8">
+                    <div onclick="" class="section-title">
+                        <h3>Register Trainer </h3>
+                    </div>
+                </div>
+            </div>
+            <div onclick="showMe(2)" id="lecture" class="col-lg-4 col-sm-7  col-md-6">
+                <div onclick="addLecture()" class="col-lg-8 col-md-8">
+                    <div onclick="addAdmins()" class="section-title">
+                        <h3> Register Lecture </h3>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </nav>
+    </section>
+    <section class="py-5">
+        <script>
+            function addTrainee() {
+                var elem = document.getElementById("addingTrainee");
+                if (elem.style.display == "none") {
+                    elem.setAttribute("style", "display:block;");
+
+                } else {
+                    elem.setAttribute("style", "display:none;");
+                }
+
+            }
+        </script>
+        <!-- Add Student Category Begin -->
+        <style>
+            .inputo {
+                padding: 10px;
+                border-color: #006699;
+                border-radius: 5%;
+                margin-bottom: 20px;
+            }
+        </style>
+        <script>
+            function addAdmins() {
+                console.log("addAdmin Function");
+                var element = document.getElementById("adminNewInput");
+                if (element.style.display == "none") {
+                    element.setAttribute("style", "display:block");
+                } else {
+                    element.setAttribute("style", "display:none");
+                }
+            }
+        </script>
+   
+    
+       <div class="container" id="adminNewInput" style="display: block;">
+        
+        <h2>Registor Admin Form</h2>
+            <div class="row">
+                <div class="col-md-6">
+             <form action="/admin/new" method="POST" enctype="multipart/form-data">
+                <input name="_csrf" value="{{.CSRF}}" style="display:none" >
+                
+                     <div class="form-group">
+                        <label for="email">Firstname:</label>
+                        <input type="email" class="form-control" id="email" placeholder="enter firstname" name="email" required>
+                      </div>
+                      <div class="form-group">
+                        <label for="email">Middlename:</label>
+                        <input type="email" class="form-control" id="email" placeholder="enter middlename" name="email" required>
+                      </div>
+                      <div class="form-group">
+                        <label for="email">Lastname:</label>
+                        <input type="text" class="form-control" id="email" placeholder="Enter lastname" name="email">
+                      </div>
+                      <div class="form-group">
+                        <label for="pwd">Email:</label>
+                        <input type="email" class="form-control" id="pwd" placeholder="enter email" name="pswd" required>
+                      </div>
+                      <div class="form-group">
+                        <label for="pwd">Phonenumber:</label>
+                        <input type="number" class="form-control" id="pwd" placeholder="enter Phonenumber" name="pswd" required>
+                      </div>
+                     
+                    </form>
+                    </div>
+
+                    <div class="col-md-6">
+                        <form action="/admin/new" method="POST" enctype="multipart/form-data">
+                           <input name="_csrf" value="{{.CSRF}}" style="display:none" >
+                           
+                             
+                                <div class="form-group">
+                                   <label for="email">Role:</label>
+                                   <br>
+                                   <select class="browser-default custom-select">
+                                    <option selected>select role for Admin</option>
+                                    <option value="1">Maried</option>
+                                    <option value="2">Diavorced</option>
+                                    <option value="3">Single</option>
+                                    <option value="4">widowed</option>
+                                    <option value="5">separeted</option>
+                                  </select>
+
+                                 </div>
+                                 
+                                 <div class="form-group">
+                                   <label for="email">Language:</label>
+                                   <br>
+                                   
+                                   <select class="browser-default custom-select">
+                                    <option selected>select Language for Admin</option>
+                                    <option value="1">English</option>
+                                    <option value="2">Amharic</option>
+                                    <option value="2">Oromifa</option>
+                                   
+                                  </select>
+                                  
+                                 </div>
+                             
+                                 <div class="form-group">
+                                    <label for="email">profilepic:</label>
+                                    
+                                    <div>
+                                    <div class="button_outer">
+                                        <div class="btn_upload">
+                                            <input type="file" id="upload_file" name="">
+                                            Upload Image
+                                        </div>
+                                        <div class="processing_bar"></div>
+                                        <div class="success_box"></div>
+                                    </div>
+                                    <div class="error_msg"></div>
+		                         <div class="uploaded_file_view" id="uploaded_view">
+			                   <span class="file_remove">X</span>
+                                </div>
+                                </div>
+                                
+                                 </div>
+                                 <div class="form-group">
+                                 <button  type="submit" class="btnform text-center">Submit</button>
+                                 </div>
+                               </form>
+                               </div>
+
+
+
+
+
+
+
+
+            </div>
+            </div>
+           
+                
+    
+        <script>
+            var registerlecture = "registerlecture";
+            var registerfieldman = "registerfieldman";
+            function showMore(theid) {
+                console.log("addAdmin Function");
+                var element = document.getElementById(theid);
+                if (element.style.display == "none") {
+                    element.setAttribute("style", "display:block");
+                } else {
+                    element.setAttribute("style", "display:none");
+                }
+            }
+        </script>
+
+
+<!-- lecture Registration Page  -->
+
+
+<div class="container" id="registerlecture" style="display: none;">
+    <h2>Registor Lecturers Form</h2>
+    <div class="row">
+        
+        <div class="col-md-6">
+     <form action="/admin/teacher/new" method="POST" enctype="multipart/form-data">
+        <input name="_csrf" value="{{.CSRF}}" style="display:none" >
+        
+            
+             <div class="form-group">
+                <label for="email">Firstname:</label>
+                <input type="email" class="form-control" id="email" placeholder="enter firstname" name="email" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Middlename:</label>
+                <input type="email" class="form-control" id="email" placeholder="enter middlename" name="email" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Lastname:</label>
+                <input type="text" class="form-control" id="email" placeholder="Enter lastname" name="email">
+              </div>
+              <div class="form-group">
+                <label for="pwd">Email:</label>
+                <input type="email" class="form-control" id="pwd" placeholder="enter email" name="pswd" required>
+              </div>
+              <div class="form-group">
+                <label for="pwd">Phonenumber:</label>
+                <input type="number" class="form-control" id="pwd" placeholder="enter Phonenumber" name="pswd" required>
+              </div>
+             
+            </form>
+            </div>
+
+            <div class="col-md-6">
+                <form action="/admin/new" method="POST" enctype="multipart/form-data">
+                   <input name="_csrf" value="{{.CSRF}}" style="display:none" >
+                   
+                      
+                         <div class="form-group">
+                           <label for="email">Language:</label>
+                           
+                           
+                           <select class="browser-default custom-select">
+                            <option selected>select Language for Lecturer</option>
+                            <option value="1">English</option>
+                            <option value="2">Amharic</option>
+                            <option value="2">Oromifa</option>
+                           
+                          </select>
+                          
+                         </div>
+                         
+                         <div class="form-group">
+                            <label for="email">profilepic:</label>
+                            
+                            <div>
+                            <div class="button_outerrr">
+                                <div class="btn_uploaddd">
+                                    <input type="file" id="upload_fileee" name="">
+                                    Upload Image
+                                </div>
+                                <div class="processing_barrr"></div>
+                                <div class="success_boxxx"></div>
+                            </div>
+                            <div class="error_msggg"></div>
+                         <div class="uploaded_file_viewww" id="uploaded_viewww">
+                       <span class="file_removeee">X</span>
+                        </div>
+                        </div>
+                        
+                         </div>
+                         <div class="form-group">
+                         <button   type="submit" class="btnform text-center">Submit</button>
+                         </div>
+                       </form>
+                       </div>
+
+
+
+
+
+
+
+
+    </div>
+    </div>
+      <!--this is adding image for lecture-->
+      <script>
+        var btnUploaddd = $("#upload_fileee"),
+        btnOuterrr = $(".button_outerrr");
+    btnUploaddd.on("change", function(e){
+        var ext = btnUploaddd.val().split('.').pop().toLowerCase();
+        if($.inArray(ext, ['gif','png','jpg','jpeg']) == -1) {
+            $(".error_msggg").text("Not an Image...");
+        } else {
+            $(".error_msggg").text("");
+            btnOuterrr.addClass("file_uploading");
+            setTimeout(function(){
+                btnOuterrr.addClass("file_uploaded");
+            },3000);
+            var uploadedFileee = URL.createObjectURL(e.target.files[0]);
+            setTimeout(function(){
+                $("#uploaded_viewww").append('<img src="'+uploadedFileee+'" />').addClass("show");
+            },3500);
+        }
+    });2
+    $(".file_removeee").on("click", function(e){
+        $("#uploaded_viewww").removeClass("show");
+        $("#uploaded_viewww").find("img").remove();
+        btnOuterrr.removeClass("file_uploading");
+        btnOuterrr.removeClass("file_uploaded");
+    });
+    </script>
+    
+    
+
+
+    <!-- registor trainer-->
+    
+<div class="container" id="registerfieldman" style="display: none;">
+    <h2>Registor Trainers Form</h2>
+    <div class="row">
+        <div class="col-md-6">
+     <form action="/admin/teacher/new" method="POST" enctype="multipart/form-data">
+        <input name="_csrf" value="{{.CSRF}}" style="display:none" >
+        
+           
+             <div class="form-group">
+                <label for="email">Firstname:</label>
+                <input type="email" class="form-control" id="email" placeholder="enter firstname" name="email" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Middlename:</label>
+                <input type="email" class="form-control" id="email" placeholder="enter middlename" name="email" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Lastname:</label>
+                <input type="text" class="form-control" id="email" placeholder="Enter lastname" name="email">
+              </div>
+              <div class="form-group">
+                <label for="pwd">Email:</label>
+                <input type="email" class="form-control" id="pwd" placeholder="enter email" name="pswd" required>
+              </div>
+              <div class="form-group">
+                <label for="pwd">Phonenumber:</label>
+                <input type="number" class="form-control" id="pwd" placeholder="enter Phonenumber" name="pswd" required>
+              </div>
+             
+            </form>
+            </div>
+
+            <div class="col-md-6">
+                <form action="/admin/new" method="POST" enctype="multipart/form-data">
+                   <input name="_csrf" value="{{.CSRF}}" style="display:none" >
+                   
+                   
+                          <div class="form-group">
+                        <label for="email">category:</label>
+                        <br>
+                        
+                        <select class="browser-default custom-select">
+                         <option selected>select category for trainer</option>
+                         <option value="1">Secretery</option>
+                         <option value="2">Admin</option>
+                        
+                       </select>
+
+                      </div>
+                    
+                    
+                   
+
+                      
+                      
+                      
+                         <div class="form-group">
+                           <label for="email">freeVichel:</label>
+                           <br>
+                           
+                           <select class="browser-default custom-select">
+                            <option selected>select freeVichel for trainer</option>
+                            <option value="1">English</option>
+                            <option value="2">Amharic</option>
+                            <option value="2">Oromifa</option>
+                           
+                          </select>
+                          
+                         </div>
+                        
+                         <div class="form-group">
+                            <label for="email">profilepic:</label>
+                          
+                            <div>
+                            <div class="button_outerr">
+                                <div class="btn_uploadd">
+                                    <input type="file" id="upload_filee" name="">
+                                    Upload Image
+                                </div>
+                                <div class="processing_barr"></div>
+                                <div class="success_boxx"></div>
+                            </div>
+                            <div class="error_msgg"></div>
+                         <div class="uploaded_file_vieww" id="uploaded_vieww">
+                       <span class="file_removee">X</span>
+                        </div>
+                        </div>
+                        
+                         </div>
+                         <div class="form-group">
+                         <button   type="submit" class="btnform text-center">Submit</button>
+                         </div>
+                       </form>
+                       </div>
+ </div>
+    </div>
+    <!--this is adding image for trainer-->
+    <script>
+    var btnUploadd = $("#upload_filee"),
+    btnOuterr = $(".button_outerr");
+btnUploadd.on("change", function(e){
+    var ext = btnUploadd.val().split('.').pop().toLowerCase();
+    if($.inArray(ext, ['gif','png','jpg','jpeg']) == -1) {
+        $(".error_msgg").text("Not an Image...");
+    } else {
+        $(".error_msgg").text("");
+        btnOuterr.addClass("file_uploading");
+        setTimeout(function(){
+            btnOuterr.addClass("file_uploaded");
+        },3000);
+        var uploadedFilee = URL.createObjectURL(e.target.files[0]);
+        setTimeout(function(){
+            $("#uploaded_vieww").append('<img src="'+uploadedFilee+'" />').addClass("show");
+        },3500);
+    }
+});2
+$(".file_removee").on("click", function(e){
+    $("#uploaded_vieww").removeClass("show");
+    $("#uploaded_vieww").find("img").remove();
+    btnOuterr.removeClass("file_uploading");
+    btnOuterr.removeClass("file_uploaded");
+});
+</script>
+
+
+
+
+
+
+
+
+
+    
+        
+        <div class="container" id="addnewCategory" style="display: none;">
+            <div class="row">
+                <div class="col-10 ts-social">
+                    <hr>
+                    <input type="text" placeholder="categoryname"><br>
+                    <br><br>
+                    <a href="" class="styledButton">Add</a>
+                    <hr>
+                </div>
+            </div>
+        </div>
+        <!-- Add New Category Input section   END-->
+
+        <script>
+            function showtable() {
+                var element = document.getElementById("teachersTable");
+                if (element.style.display == "none") {
+                    element.setAttribute("style", "display:block;")
+                } else {
+                    element.setAttribute("style", "display:none;")
+                }
+            }
+        </script>
+       
+        <script>
+            var newClassmate = "newClassmate";
+            var newfieldTrainer = "newfieldTrainer";
+            var addAdminss = "addAdminss";
+            function showMore(id) {
+                var elem = document.getElementById(id);
+                if (elem.style.display == "none") {
+                    elem.setAttribute("style", "display:block");
+                } else {
+                    elem.setAttribute("style", "display:none");
+                }
+            }
+        </script>
+        </div>
+    </section>
+    <!--it is script form for adding image for the Admin-->
+    <script>
+
+        var btnUpload = $("#upload_file"),
+                btnOuter = $(".button_outer");
+            btnUpload.on("change", function(e){
+                var ext = btnUpload.val().split('.').pop().toLowerCase();
+                if($.inArray(ext, ['gif','png','jpg','jpeg']) == -1) {
+                    $(".error_msg").text("Not an Image...");
+                } else {
+                    $(".error_msg").text("");
+                    btnOuter.addClass("file_uploading");
+                    setTimeout(function(){
+                        btnOuter.addClass("file_uploaded");
+                    },3000);
+                    var uploadedFile = URL.createObjectURL(e.target.files[0]);
+                    setTimeout(function(){
+                        $("#uploaded_view").append('<img src="'+uploadedFile+'" />').addClass("show");
+                    },3500);
+                }
+            });
+            $(".file_remove").on("click", function(e){
+                $("#uploaded_view").removeClass("show");
+                $("#uploaded_view").find("img").remove();
+                btnOuter.removeClass("file_uploading");
+                btnOuter.removeClass("file_uploaded");
+            });
+        </script>
+
+
+  
+
+   
+<!--this is to inform u this section will be deleted-->
+
+
+
+       
+
+    </div>
+
+
+
+
+    
+
+
+
+    </div>
+    </div>
+    
+
+</body>
+{{ template "footer.html" }}
+
+
+</html>

@@ -1,0 +1,36 @@
+.cards{
+    transition: 0.7s ease;
+    cursor: pointer;
+  
+  }
+  .cards:hover{
+    transform: scale(1.1);
+    box-shadow: 5px  5px 15px rgba(#003679, #003679, #003679, #003679);
+    background-color: #003679;
+    color: white;
+
+  
+  }
+
+
+
+@media only screen and (min-width: 1367px) {
+    .cardss{
+       width: 450px;
+       height: 500px;
+       margin-left: 250px;
+       
+      
+     }
+ 
+   }
+   @media only screen and (min-width: 1024px) and (max-width: 1366px) {
+    .cardss{
+       width: 450px;
+       height: 500px;
+       margin-left: 100px;
+       
+      
+     }
+ 
+   }

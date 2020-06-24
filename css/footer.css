@@ -1,0 +1,84 @@
+.footer-section {
+    background: #012046;
+    padding-top: 70px;
+  }
+  
+  .fs-about {
+    margin-bottom: 30px;
+  }
+  .fs-about .fs-logo {
+    margin-bottom: 20px;
+  }
+  .fs-about .fs-logo a {
+    display: inline-block;
+  }
+  .fs-about p {
+    color: #ffffff;
+    line-height: 27px;
+    opacity: 0.7;
+    margin-bottom: 25px;
+  }
+  .fs-about .fs-social a {
+    display: inline-block;
+    font-size: 15px;
+    color: #ffffff;
+    height: 40px;
+    width: 40px;
+    background: rgba(225, 225, 225, 0.1);
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    margin-right: 4px;
+  }
+  .fs-about .fs-social a:last-child {
+    margin-right: 0;
+  }
+  
+  .fs-widget {
+    margin-bottom: 30px;
+  }
+  .fs-widget h5 {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 26px;
+  }
+  .fs-widget ul li {
+    list-style: none;
+  }
+  .fs-widget ul li a {
+    font-size: 14px;
+    color: #ffffff;
+    opacity: 0.6;
+    line-height: 30px;
+  }
+  .fs-widget p {
+    color: #ffffff;
+    opacity: 0.6;
+  }
+  .fs-widget .subscribe-form input {
+    width: 100%;
+    height: 52px;
+    border: 1px solid #536A68;
+    font-size: 14px;
+    padding-left: 30px;
+    color: #ffffff;
+    opacity: 0.7;
+    background: transparent;
+    margin-bottom: 20px;
+  }
+  .fs-widget .subscribe-form input::placeholder {
+    color: #ffffff;
+    opacity: 0.7;
+  }
+  
+  .copyright-text {
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    color: #ffffff;
+    opacity: 0.6;
+    text-align: center;
+    border-top: 1px solid #284745;
+    padding: 25px 0;
+    margin-top: 40px;
+  }

@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css?family=Acme|Lobster|Patua+One|Rubik|Sniglet");
+
+html,
+body {
+  height: 100%;
+  font-family: 'Times New Roman', Times, serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+
+body {
+   /* background: #F1F3FA;*/
+   background: white;
+  }
+.card{
+  
+  border-color: #003679;
+  
+  width: 500px;
+  margin: 0 auto; /* Added */
+  float: none; /* Added */
+  margin-bottom: 10px; /* Added */
+
+}
+button{
+  background: #003679;
+  color: white;
+   border-radius:30px;
+   text-align: center;
+   height: 50px;
+   width: 200px;
+   
+   
+   
+   }
+   p{
+     font-size: 20px;
+   }
+  
