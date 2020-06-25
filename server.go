@@ -14,7 +14,7 @@ func init() {
 //var tmpl = template.Must(template.ParseFiles("index.html", "assets/upcomingMovie.html", "header.html", "footer.html"))
 
 func index(w http.ResponseWriter, r *http.Request) {
-	tpl.ExecuteTemplate(w, "secretory.html", nil)
+	tpl.ExecuteTemplate(w, "secretory.html", nil) jkedjwdoijeoidjhei
 }
 func up(w http.ResponseWriter, r *http.Request) {
 	tpl.ExecuteTemplate(w, "admin_registor.html", nil)
